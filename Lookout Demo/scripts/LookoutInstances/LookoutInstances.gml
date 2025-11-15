@@ -1,9 +1,9 @@
 
-/// @func DebugViewInstances()
+/// @func LookoutInstances()
 /// @param {Bool} startVisible? Whether the debug view should start visible (true) or not (false). [Default: true]
 /// @desc Displays the overall and per object amounts of instances in an Instances debug overlay view.
 /// Call anywhere in the project.
-function DebugViewInstances(_startVisible = true) {
+function LookoutInstances(_startVisible = true) {
 	static __ = new (function(_startVisible) constructor {
 		__objects = array_map(asset_get_ids(asset_object), function(_obj) {
 			return {
@@ -13,7 +13,7 @@ function DebugViewInstances(_startVisible = true) {
 			};
 		});
 		__totalInstances = undefined;
-		__view = dbg_view("Instances", _startVisible, 16, 35, 400, 500);
+		__view = dbg_view("Lookout: Instances", _startVisible, 16, 35, 400, 500);
 		__section = undefined;
 		
 		__Refresh = function() {

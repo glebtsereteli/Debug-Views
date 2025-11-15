@@ -1,9 +1,9 @@
 
-/// @func DebugViewDisplay()
+/// @func LookoutDisplay()
 /// @param {Bool} startVisible? Whether the debug view should start visible (true) or not (false). [Default: true]
 /// @desc Shows display, window, surface, GUI, and view information in a Display debug view.
 /// Call once at the start of the game.
-function DebugViewDisplay(_startVisible = true) {
+function LookoutDisplay(_startVisible = true) {
 	static __ = new (function(_startVisible) constructor {
 		__display = undefined;
 		__window = undefined;
@@ -35,7 +35,7 @@ function DebugViewDisplay(_startVisible = true) {
 			return $"{_w}x{_h}: {_w / _h}";
 		};
 		
-		dbg_view("Display", _startVisible, 8, 27, 400, 500);
+		dbg_view("Lookout: Display", _startVisible, 8, 27, 400, 500);
 		
 		dbg_section("Core", true);
 		dbg_watch(ref_create(self, "__display"), "Display");

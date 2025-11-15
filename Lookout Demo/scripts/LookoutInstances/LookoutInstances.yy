@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"DebugViewRooms",
+  "%Name":"LookoutInstances",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"DebugViewRooms",
+  "name":"LookoutInstances",
   "parent":{
     "name":"02. Lookout",
     "path":"folders/02. Lookout.yy",

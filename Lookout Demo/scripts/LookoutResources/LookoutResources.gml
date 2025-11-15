@@ -1,9 +1,9 @@
 
-/// @func DebugViewResources()
+/// @func LookoutResources()
 /// @param {Bool} startVisible? Whether the debug view should start visible (true) or not (false). [Default: true]
 /// @desc Displays the data fetched from debug_event("ResourceCounts") and debug_event("DumpMemory") in a Resource Counts debug overlay view.
 /// Call anywhere in the project.
-function DebugViewResources(_startVisible = true) {
+function LookoutResources(_startVisible = true) {
 	static __ = new (function(_startVisible) constructor {
 		var _Refresh = function() {
 			if (not is_debug_overlay_open()) return;
@@ -19,7 +19,7 @@ function DebugViewResources(_startVisible = true) {
 		_Refresh();
 		call_later(1, time_source_units_frames, _Refresh, true);
 		
-		dbg_view("Resources", _startVisible, 8, 27, 350, 550);
+		dbg_view("Lookout: Resources", _startVisible, 8, 27, 350, 550);
 		dbg_section("Resources"); {
 			dbg_watch(ref_create(self, "instanceCount"), "Instances");
 			dbg_text_separator("");
