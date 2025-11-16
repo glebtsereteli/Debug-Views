@@ -42,7 +42,7 @@ function LookoutRooms(_startVisible = true) {
 			__history.__Add(_room);
 		};
 		
-		dbg_view("Lookout: Rooms", _startVisible, 8, 27, 420, 414);
+		dbg_view("Lookout: Rooms", _startVisible, 16, 35, 420, 414);
 		dbg_section("Control");
 		dbg_drop_down(ref_create(self, "__room"), __rooms, __names, "Room");
 		

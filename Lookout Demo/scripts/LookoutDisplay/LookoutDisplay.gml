@@ -114,7 +114,7 @@ function LookoutDisplay(_startVisible = true) {
 			});
 		};
 		
-		dbg_view("Lookout: Display", _startVisible, 8, 27, 420, 675);
+		dbg_view("Lookout: Display", _startVisible, 16, 35, 420, 675);
 		
 		var __Half = function(_getterX, _getterY, _setter) {
 			dbg_same_line();

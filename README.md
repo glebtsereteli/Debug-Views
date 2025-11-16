@@ -6,10 +6,13 @@ These views have proven invaluable for tracking bugs and memory leaks across man
 
 ## Views
 
-* **Resources**. Displays `"ResourceCounts"` and `"DumpMemory"` data from [debug_event()](https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Debugging/debug_event.htm). Helps track memory leaks from data structures, surfaces, buffers, particles, time sources, and other runtime-created assets that can be accidentally left undisposed.
-* **Instances**. Displays the overall and per-object instance counts, including differences between frames, with an option to destroy objects. Helps track existing objects and their instance amounts to identify objects that are out of place.
-* **Display**. Provides defailed information and controls for display, window, application surface, and views. Inspired by Pixelated Pope's [display_write_all_specs()](https://github.com/PixelatedPope/HelpfulGMLScripts/blob/master/Camera%20and%20Views/display_write_all_specs.gml).
-* **Rooms**. Provides controls over room switching and displays room history. Useful for quickly switching between rooms for testing and identifying unintentional room changes.
+* [Resources](https://github.com/glebtsereteli/Lookout/blob/main/Views/LookoutResources.gml). Displays `"ResourceCounts"` and `"DumpMemory"` data from [debug_event()](https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Debugging/debug_event.htm). Helps track memory leaks from data structures, surfaces, buffers, particles, time sources, and other runtime-created assets that can be accidentally left undisposed.
+* [Instances](https://github.com/glebtsereteli/Lookout/blob/main/Views/LookoutInstances.gml). Displays the overall and per-object instance counts, including differences between frames, with an option to destroy objects. Helps track existing objects and their instance counts to misplaced instances.
+* [Display](https://github.com/glebtsereteli/Lookout/blob/main/Views/LookoutDisplay.gml). Provides defailed information and controls for display, window, application surface, and views. Inspired by Pixelated Pope's [display_write_all_specs()](https://github.com/PixelatedPope/HelpfulGMLScripts/blob/master/Camera%20and%20Views/display_write_all_specs.gml).
+* [Rooms](https://github.com/glebtsereteli/Lookout/blob/main/Views/LookoutRooms.gml). Provides controls over room switching and displays room history. Useful for quickly switching between rooms for testing and identifying unintentional room changes.
+* [Layers](https://www.youtube.com/watch?v=dQw4w9WgXcQ). Coming soon!
+* [Physics](https://www.youtube.com/watch?v=dQw4w9WgXcQ). Coming soon!
+* [System](https://www.youtube.com/watch?v=dQw4w9WgXcQ). Coming soon!
 
 ## Usage
 
