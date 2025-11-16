@@ -11,22 +11,6 @@ function __LookoutDisplayParam(_name, _value, _setter) {
 		self[$ $"{_name}Prev"] = self[$ _name];
 	}
 }
-function __LookoutDisplayHalf(_getterX, _getterY, _setter) {
-	dbg_same_line();
-	with ({_getterX, _getterY, _setter}) {
-		dbg_button("/2", function() {
-			_setter(_getterX() / 2, _getterY() / 2);
-		}, 20, 19);
-	}
-}
-function __LookoutDisplayDouble(_getterX, _getterY, _setter) {
-	dbg_same_line();
-	with ({_getterX, _getterY, _setter}) {
-		dbg_button("x2", function() {
-			_setter(_getterX() * 2, _getterY() * 2);
-		}, 20, 19);
-	}
-}
 function __LookoutDisplayGetWH(_w, _h) {
 	return $"{_w}x{_h}";
 }
@@ -132,22 +116,39 @@ function LookoutDisplay(_startVisible = true) {
 		
 		dbg_view("Lookout: Display", _startVisible, 8, 27, 420, 675);
 		
+		var __Half = function(_getterX, _getterY, _setter) {
+			dbg_same_line();
+			with ({_getterX, _getterY, _setter}) {
+				dbg_button("/2", function() {
+					_setter(_getterX() / 2, _getterY() / 2);
+				}, 20, 19);
+			}
+		}
+		var __Double = function(_getterX, _getterY, _setter) {
+			dbg_same_line();
+			with ({_getterX, _getterY, _setter}) {
+				dbg_button("x2", function() {
+					_setter(_getterX() * 2, _getterY() * 2);
+				}, 20, 19);
+			}
+		}
+		
 		// display
 		dbg_section("Display", true);
 		dbg_watch(ref_create(__display, "__size"), "Size");
 		dbg_watch(ref_create(__display, "__ar"), "Aspect Ratio");
 		
 		dbg_text_separator("GUI", 1);
-		dbg_text_input(ref_create(__display, "__guiW"), "Width", "i"); __LookoutDisplayHalf(display_get_gui_width, display_get_gui_height, display_set_gui_size);
-		dbg_text_input(ref_create(__display, "__guiH"), "Height", "i"); __LookoutDisplayDouble(display_get_gui_width, display_get_gui_height, display_set_gui_size);
+		dbg_text_input(ref_create(__display, "__guiW"), "Width", "i"); __Half(display_get_gui_width, display_get_gui_height, display_set_gui_size);
+		dbg_text_input(ref_create(__display, "__guiH"), "Height", "i"); __Double(display_get_gui_width, display_get_gui_height, display_set_gui_size);
 		dbg_watch(ref_create(__display, "__guiAR"), "Aspect Ratio");
 		
 		dbg_text_separator("Application Surface", 1);
 		var _GetAppSurfW = function() { return surface_get_width(application_surface); };
-		var _GetAppSurfH = function() { return surface_get_width(application_surface); };
+		var _GetAppSurfH = function() { return surface_get_height(application_surface); };
 		var _ResizeAppsurf = function(_w, _h) { surface_resize(application_surface, _w, _h); };
-		dbg_text_input(ref_create(__display, "__appSurfW"), "Width", "i"); __LookoutDisplayHalf(_GetAppSurfW, _GetAppSurfH, _ResizeAppsurf);
-		dbg_text_input(ref_create(__display, "__appSurfH"), "Height", "i"); __LookoutDisplayDouble(_GetAppSurfW, _GetAppSurfH, _ResizeAppsurf);
+		dbg_text_input(ref_create(__display, "__appSurfW"), "Width", "i"); __Half(_GetAppSurfW, _GetAppSurfH, _ResizeAppsurf);
+		dbg_text_input(ref_create(__display, "__appSurfH"), "Height", "i"); __Double(_GetAppSurfW, _GetAppSurfH, _ResizeAppsurf);
 		dbg_watch(ref_create(__display, "__appSurfAR"), "Aspect Ratio");
 		
 		dbg_text_separator("Extras", 1);
