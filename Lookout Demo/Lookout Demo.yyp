@@ -23,6 +23,8 @@
   "name":"Lookout Demo",
   "resources":[
     {"id":{"name":"objDemo","path":"objects/objDemo/objDemo.yy",},},
+    {"id":{"name":"objTest1","path":"objects/objTest1/objTest1.yy",},},
+    {"id":{"name":"objTest2","path":"objects/objTest2/objTest2.yy",},},
     {"id":{"name":"rmDemo","path":"rooms/rmDemo/rmDemo.yy",},},
     {"id":{"name":"LookoutDisplay","path":"scripts/LookoutDisplay/LookoutDisplay.yy",},},
     {"id":{"name":"LookoutInstances","path":"scripts/LookoutInstances/LookoutInstances.yy",},},

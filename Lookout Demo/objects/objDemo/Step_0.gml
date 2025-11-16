@@ -6,3 +6,20 @@ if (keyboard_check_pressed(vk_space)) {
 	//window_set_fullscreen(not window_get_fullscreen());
 	window_set_size(irandom_range(1000, 1200), irandom_range(600, 800));
 }
+
+if (keyboard_check_pressed(ord("1"))) {
+	repeat (irandom(100)) {
+		instance_create_depth(0, 0, 0, objTest1);
+	}
+}
+if (keyboard_check_pressed(ord("2"))) {
+	instance_destroy(objTest1);
+}
+if (keyboard_check_pressed(ord("3"))) {
+	repeat (irandom(100)) {
+		instance_create_depth(0, 0, 0, objTest2);
+	}
+}
+if (keyboard_check_pressed(ord("4"))) {
+	instance_destroy(objTest2);
+}
