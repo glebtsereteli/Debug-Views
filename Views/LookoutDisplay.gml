@@ -1,25 +1,4 @@
 
-#region __private
-
-function __LookoutDisplayParam(_name, _value, _setter) {
-	if ((_value != self[$ _name]) and (_value != self[$ $"{_name}Prev"])) {
-		self[$ _name] = _value;
-		self[$ $"{_name}Prev"] = _value;
-	}
-	else if (self[$ _name] != self[$ $"{_name}Prev"]) {
-		_setter(self[$ _name]);
-		self[$ $"{_name}Prev"] = self[$ _name];
-	}
-}
-function __LookoutDisplayGetWH(_w, _h) {
-	return $"{_w}x{_h}";
-}
-function __LookoutDisplayGetWHAR(_w, _h) {
-	return $"{_w}x{_h}: {_w / _h}";
-}
-
-#endregion
-
 /// @func LookoutDisplay()
 /// @param {Bool} startVisible? Whether the debug view should start visible (true) or not (false). [Default: true]
 /// @desc Provides info and controls for display, window, application surface, and views in a "Lookout: Display" debug view.
@@ -233,3 +212,24 @@ function LookoutDisplay(_startVisible = true) {
 		call_later(1, time_source_units_frames, __Refresh, true);
 	})(_startVisible);
 }
+
+#region __private
+
+function __LookoutDisplayParam(_name, _value, _setter) {
+	if ((_value != self[$ _name]) and (_value != self[$ $"{_name}Prev"])) {
+		self[$ _name] = _value;
+		self[$ $"{_name}Prev"] = _value;
+	}
+	else if (self[$ _name] != self[$ $"{_name}Prev"]) {
+		_setter(self[$ _name]);
+		self[$ $"{_name}Prev"] = self[$ _name];
+	}
+}
+function __LookoutDisplayGetWH(_w, _h) {
+	return $"{_w}x{_h}";
+}
+function __LookoutDisplayGetWHAR(_w, _h) {
+	return $"{_w}x{_h}: {_w / _h}";
+}
+
+#endregion
