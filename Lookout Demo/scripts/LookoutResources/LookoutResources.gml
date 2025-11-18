@@ -10,7 +10,16 @@ function LookoutResources(_startVisible = true) {
 			if (not is_debug_overlay_open()) return;
 			
 			struct_foreach(debug_event("ResourceCounts", true), function(_key, _value) {
-				self[$ _key] = _value;
+				self[$ _key] ??= _value;
+				self[$ $"{_key}Prev"] ??= _value;
+				
+				var _display = _value;
+				var _delta = _value - self[$ $"{_key}Prev"];
+				if (_delta != 0) {
+					_display = $"{_display} ({(_delta > 0) ? "+" : "-"}{abs(_delta)})";
+					self[$ _key] = _display;
+				}
+				self[$ $"{_key}Prev"] = _value;
 			});
 			struct_foreach(debug_event("DumpMemory", true), function(_key, _value) {
 				self[$ _key] = $"{string_format(_value / 1_000_000, 1, 2)}mb";

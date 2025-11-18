@@ -29,7 +29,6 @@ function LookoutInstances(_startVisible = true) {
 					__n = instance_number(__ref);
 					if (__n != __nPrev) {
 					    __nDelta = __n - __nPrev;
-						__died = (__n == 0);
 					}
 					__nPrev = __n;
 				}
@@ -47,7 +46,7 @@ function LookoutInstances(_startVisible = true) {
 			
 			array_foreach(__objects, function(_obj) {
 				with (_obj) {
-					if ((__n > 0) or __died) {
+					if (__n > 0) {
 						__display = __n;
 						if (__nDelta != 0) {
 							__display = $"{__display} ({(__nDelta > 0) ? "+" : "-"}{abs(__nDelta)})";
