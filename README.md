@@ -27,6 +27,7 @@ These views have proven invaluable for tracking bugs and memory leaks across man
 ## Credits
 * Wonderful promo art by the very talented [neerikiffu](https://bsky.app/profile/neerikiffu.bsky.social)!
 * Thanks to [Omar Cornut](https://www.miracleworld.net/) for making the infinitely useful [Dear ImGui](https://github.com/ocornut/imgui) and to the GameMaker team for implementing it in the [Debug Overlay](https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Debugging/The_Debug_Overlay.htm).
+* Demo art by [Kenney](https://kenney.nl) the ✨*Asset Jesus*✨.
 
 ## Upcoming Views
 

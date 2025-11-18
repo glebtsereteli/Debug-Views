@@ -1,15 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"objTest2",
+  "%Name":"objDemoParrot",
   "eventList":[],
   "managed":true,
-  "name":"objTest2",
+  "name":"objDemoParrot",
   "overriddenProperties":[],
   "parent":{
-    "name":"Lookout Demo",
-    "path":"Lookout Demo.yyp",
+    "name":"01. Parrot",
+    "path":"folders/01. Demo/02. Objects/01. Parrot.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"objDemoParent",
+    "path":"objects/objDemoParent/objDemoParent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -27,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sprDemoParrot",
+    "path":"sprites/sprDemoParrot/sprDemoParrot.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

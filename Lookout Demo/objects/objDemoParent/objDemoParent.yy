@@ -1,13 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"objTest1",
-  "eventList":[],
+  "%Name":"objDemoParent",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"objTest1",
+  "name":"objDemoParent",
   "overriddenProperties":[],
   "parent":{
-    "name":"Lookout Demo",
-    "path":"Lookout Demo.yyp",
+    "name":"02. Objects",
+    "path":"folders/01. Demo/02. Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

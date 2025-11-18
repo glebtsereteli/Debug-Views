@@ -90,3 +90,58 @@ dbg_view("Demo: Resources", false, 16, 35, 300, 850); {
 		new Res("Timeline", timeline_add, timeline_delete);
 	}
 }
+dbg_view("Demo: Instances", false, 16, 35, 250, 320); {
+	Obj = function(_ref) constructor {
+		ref = _ref;
+		pool = [];
+		
+		static Spawn = function() {
+			var _pad = 100;
+			var _x = random_range(_pad, room_width - _pad);
+			var _y = random_range(_pad, room_height - _pad);
+			var _inst = instance_create_depth(_x, _y, -1000, ref);
+			array_push(pool, _inst);
+		};
+		
+		dbg_text_separator(object_get_name(ref));
+		var _w = 70;
+		var _h = 20;
+		dbg_button("Spawn", function() {
+			Spawn();
+		}, _w, _h);
+		dbg_same_line();
+		dbg_button("Destroy", function() {
+			if (array_length(pool) > 0) {
+				instance_destroy(array_pop(pool));
+			}
+		}, _w, _h);
+		dbg_same_line();
+		dbg_button("Clear", function() {
+			array_foreach(pool, function(_inst) {
+				instance_destroy(_inst);
+			});
+			pool = [];
+		}, _w, _h);
+	};
+	
+	dbg_section("Controls"); {
+		var _w = 100;
+		var _h = 20;
+		dbg_button("Random Fill", function() {
+			repeat (irandom_range(10, 50)) {
+				method_call(choose, objects).Spawn();
+			}
+		}, _w, _h);
+		dbg_same_line();
+		dbg_button("Destroy All", function() {
+			instance_destroy(objDemoParent);
+		}, _w, _h);
+		objects = [
+			new Obj(objDemoParrot),
+			new Obj(objDemoPenguin),
+			new Obj(objDemoOwl),
+			new Obj(objDemoSnake),
+			new Obj(objDemoGorilla),
+		];
+	}
+}

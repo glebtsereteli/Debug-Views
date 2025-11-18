@@ -1,18 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"objDemoControl",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"objDemoPenguin",
+  "eventList":[],
   "managed":true,
-  "name":"objDemoControl",
+  "name":"objDemoPenguin",
   "overriddenProperties":[],
   "parent":{
-    "name":"01. Core",
-    "path":"folders/01. Demo/01. Core.yy",
+    "name":"02. Penguin",
+    "path":"folders/01. Demo/02. Objects/02. Penguin.yy",
   },
-  "parentObjectId":null,
-  "persistent":true,
+  "parentObjectId":{
+    "name":"objDemoParent",
+    "path":"objects/objDemoParent/objDemoParent.yy",
+  },
+  "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,
@@ -29,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sprDemoPenguin",
+    "path":"sprites/sprDemoPenguin/sprDemoPenguin.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
