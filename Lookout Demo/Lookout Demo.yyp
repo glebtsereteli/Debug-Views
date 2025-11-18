@@ -26,6 +26,7 @@
   "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[
     {"$GMIncludedFile":"","%Name":"fntDemo.ttf","CopyToMask":-1,"filePath":"datafiles","name":"fntDemo.ttf","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"Lookout License.txt","CopyToMask":-1,"filePath":"datafiles","name":"Lookout License.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
   ],
   "isEcma":false,
   "LibraryEmitters":[],
