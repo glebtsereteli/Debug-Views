@@ -16,7 +16,7 @@ To get started, launch the game and open the Views menu in the top bar of the De
 3. Watch the instance counts in the "Lookout: Instances" view update in real time.
 
 ## Display
-[COMING SOON]
+[DEMO COMING SOON]
 
 ## Rooms
 1. Open the "Lookout: Rooms" view.
