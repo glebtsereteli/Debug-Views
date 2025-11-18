@@ -36,6 +36,7 @@
   "name":"Lookout Demo",
   "resources":[
     {"id":{"name":"03. Lookout Info","path":"notes/03. Lookout Info/03. Lookout Info.yy",},},
+    {"id":{"name":"readme","path":"notes/readme/readme.yy",},},
     {"id":{"name":"objDemoControl","path":"objects/objDemoControl/objDemoControl.yy",},},
     {"id":{"name":"objDemoGorilla","path":"objects/objDemoGorilla/objDemoGorilla.yy",},},
     {"id":{"name":"objDemoOwl","path":"objects/objDemoOwl/objDemoOwl.yy",},},
