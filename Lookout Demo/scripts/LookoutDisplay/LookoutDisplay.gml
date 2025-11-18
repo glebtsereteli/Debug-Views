@@ -3,9 +3,9 @@
 /// @func LookoutDisplay()
 /// @param {Bool} startVisible? Whether the debug view should start visible (true) or not (false). [Default: true]
 /// @desc Provides info and controls for display, window, application surface, and views in a "Lookout: Display" debug view.
-/// Call anywhere in the project.
+/// Call this function once at the start of the game.
 /// ____________________________
-/// Version: v1.0.0 (18.11.2025)
+/// Version: v1.0.0 (2025.11.18)
 function LookoutDisplay(_startVisible = true) {
 	static __ = new (function(_startVisible) constructor {
 		__display = {

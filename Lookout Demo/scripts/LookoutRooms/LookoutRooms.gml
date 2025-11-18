@@ -3,9 +3,9 @@
 /// @func LookoutRooms()
 /// @param {Bool} startVisible? Whether the debug view should start visible (true) or not (false). [Default: true]
 /// @desc Provides control over room switching and displays room history in a Rooms debug overlay view.
-/// Call once at the start of the game.
+/// Call this function once at the start of the game.
 /// ____________________________
-/// Version: v1.0.0 (18.11.2025)
+/// Version: v1.0.0 (2025.11.18)
 function LookoutRooms(_startVisible = true) {
 	static __ = new(function(_startVisible) constructor {
 		__rooms = asset_get_ids(asset_room);
