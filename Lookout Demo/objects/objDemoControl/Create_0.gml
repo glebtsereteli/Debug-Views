@@ -1,4 +1,9 @@
 
+if (instance_number(object_index) > 1) {
+	instance_destroy();
+	exit;
+}
+
 LookoutResources(false);
 LookoutInstances();
 LookoutDisplay(false);
