@@ -21,7 +21,7 @@ These views have proven invaluable for tracking bugs and memory leaks across man
 
 1. Download the `.yymps` local package from the latest [Release](https://github.com/glebtsereteli/Lookout/releases/v1.0.0).
 2. Import the local package into your project.
-3. Call the view functions you'd like to use at the start of your game. See available parameters in the JSDoc comments for each function.
+3. Call any of the functions listed above at the start of your game to activate their corresponding views. Refer to each function's JSDoc comments for details.
 4. Access your views under the Views menu in the top bar of the [Debug Overlay](https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Debugging/The_Debug_Overlay.htm).
 
 ## Credits
