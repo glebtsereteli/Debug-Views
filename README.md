@@ -10,6 +10,17 @@ These views have proven invaluable for tracking bugs and memory leaks across man
 * **GameMaker Version**: [v2024.14](https://releases.gamemaker.io/release-notes/2024/14) (the latest Monthly).
 * **Platforms**: All but HTML5.
 
+<table style="width: 100%; table-layout: fixed; border-collapse: separate; border-spacing: 10px;">
+  <tr>
+    <td style="width: 50%;"><a href="https://github.com/user-attachments/assets/3a434a8d-cf51-4203-ba70-ac88d6916a8e"><img src="https://github.com/user-attachments/assets/3a434a8d-cf51-4203-ba70-ac88d6916a8e" style="width: 100%; display: block;"></a></td>
+    <td style="width: 50%;"><a href="https://github.com/user-attachments/assets/57e49114-d694-4dc8-b317-d53a23a5bcaa"><img src="https://github.com/user-attachments/assets/57e49114-d694-4dc8-b317-d53a23a5bcaa" style="width: 100%; display: block;"></a></td>
+  </tr>
+  <tr>
+    <td style="width: 50%;"><a href="https://github.com/user-attachments/assets/d420724c-476c-4574-a79e-14aba2747cb0"><img src="https://github.com/user-attachments/assets/d420724c-476c-4574-a79e-14aba2747cb0" style="width: 100%; display: block;"></a></td>
+    <td style="width: 50%;"><a href="https://github.com/user-attachments/assets/b2da27b6-1c33-4c6b-9499-410c29482441"><img src="https://github.com/user-attachments/assets/b2da27b6-1c33-4c6b-9499-410c29482441" style="width: 100%; display: block;"></a></td>
+  </tr>
+</table>
+
 ## Views
 
 * `LookoutResources()`. Displays `"ResourceCounts"` and `"DumpMemory"` data from [debug_event()](https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Debugging/debug_event.htm). Helps track memory leaks from data structures, surfaces, buffers, particles, time sources, and other runtime-created assets that can be accidentally left undisposed.
