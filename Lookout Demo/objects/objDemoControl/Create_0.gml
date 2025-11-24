@@ -87,6 +87,12 @@ dbg_view("Demo: Resources", false, 16, 35, 300, 850); {
 			surface_free
 		);
 		new Res("Audio Emitter", audio_emitter_create, audio_emitter_free);
+		new Res("Audio Sync Group",
+			function() {
+				return audio_create_sync_group(true);
+			},
+			audio_destroy_sync_group
+		);
 		new Res("Particle System", part_system_create, part_system_destroy);
 		new Res("Particle Emitter",
 			function() { return part_emitter_create(global.partSystem); }, 

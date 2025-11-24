@@ -18,6 +18,10 @@ function LookoutResources(_startVisible = true) {
 			
 			var _resources = debug_event("ResourceCounts", true);
 			
+			var _syncGroup = audio_create_sync_group(false);
+			_resources.__audioSyncGroups = _syncGroup;
+			audio_destroy_sync_group(_syncGroup);
+			
 			var _cam = camera_create();
 			_resources.__cameras = _cam;
 			camera_destroy(_cam);
@@ -60,6 +64,7 @@ function LookoutResources(_startVisible = true) {
 			dbg_watch(ref_create(self, "vertexBufferCount"), "Vertex Buffers");
 			dbg_watch(ref_create(self, "surfaceCount"), "Surfaces");
 			dbg_watch(ref_create(self, "audioEmitterCount"), "Audio Emitters");
+			dbg_watch(ref_create(self, "__audioSyncGroups"), "Audio Sync Groups");
 			dbg_watch(ref_create(self, "partSystemCount"), "Particle Systems");
 			dbg_watch(ref_create(self, "partEmitterCount"), "Particle Emitters");
 			dbg_watch(ref_create(self, "partTypeCount"), "Particle Types");
