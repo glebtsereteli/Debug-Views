@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"LookoutResources",
+  "%Name":"LookoutViewDisplay",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"LookoutResources",
+  "name":"LookoutViewDisplay",
   "parent":{
     "name":"01. Public",
     "path":"folders/02. Lookout/01. Public.yy",
