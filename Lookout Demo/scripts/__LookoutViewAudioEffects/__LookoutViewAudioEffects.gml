@@ -45,15 +45,13 @@ function __LookoutAudioEffect(_index) constructor {
 		var _remoteType = (is_undefined(_remoteEffect) ? undefined : _remoteEffect.type);
 		var _tookRemote = false;
 		
-		if ((_remoteType != __type) and (_remoteType != __prevType)) {
-			__type = _remoteType;
-			__prevType = _remoteType;
+		if (_remoteEffect != __effect) {
+			__effect = _remoteEffect;
+			__type = _remoteEffect.type;
+			__prevType = __type;
 			_tookRemote = true;
 		}
-		else if (__type != __prevType) {
-			__prevType = __type;
-		}
-		else if (__initialized) return;
+		else if ((__initialized) and (__type == __prevType)) return;
 		
 		if (__initialized) {
 			array_foreach(__controls, function(_control) {
@@ -71,6 +69,7 @@ function __LookoutAudioEffect(_index) constructor {
 			__effect = _remoteEffect;
 		}
 		else {
+			__prevType = __type;
 			__effect = (is_undefined(__type) ? undefined : audio_effect_create(__type));
 			audio_bus_main.effects[__index] = __effect;
 		}
@@ -96,12 +95,12 @@ function __LookoutAudioEffect(_index) constructor {
 		__Control(dbg_same_line());
 		__Control(dbg_button("+", function() { __Change(+1); }, 19, 19));
 		
-		if (__effect != undefined) {
-			__Control(dbg_checkbox(ref_create(__effect, "bypass"), "Bypass"));
-			__Control(dbg_text_separator(""));
-		}
+		if (__effect == undefined) return;
 		
-		switch (__type) {
+		__Control(dbg_checkbox(ref_create(__effect, "bypass"), "Bypass"));
+		__Control(dbg_text_separator(""));
+		
+		switch (__effect.type) {
 			case AudioEffectType.Reverb1: {
 				__Control(dbg_slider(ref_create(__effect, "size"), 0, 1, "Size"));
 				__Control(dbg_slider(ref_create(__effect, "damp"), 0, 1, "Damp"));
