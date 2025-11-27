@@ -49,7 +49,21 @@ function LookoutAudioEffects(_startVisible = true) {
 				audio_bus_main.effects[__index] = __effect;
 			};
 			static __Refresh = function() {
-				if ((__initialized) and (__type == __prevType)) return;
+				var _remoteEffect = audio_bus_main.effects[__index];
+				var _remoteType = (is_undefined(_remoteEffect) ? undefined : _remoteEffect.type);
+				
+				var _changed = false;
+				if ((_remoteType != __type) and (_remoteType != __prevType)) {
+					__type = _remoteType;
+					__prevType = _remoteType;
+					_changed = true;
+				}
+				else if (__type != __prevType) {
+					__prevType = __type;
+					_changed = true;
+				}
+				
+				if (__initialized and not _changed) return;
 				
 				if (__initialized) {
 					array_foreach(__controls, function(_control) {
@@ -62,7 +76,6 @@ function LookoutAudioEffects(_startVisible = true) {
 					__section = dbg_section($"Effect {__index}", (__index == 0));
 				}
 				__initialized = true;
-				__prevType = __type;
 				
 				__effect = (is_undefined(__type) ? undefined : audio_effect_create(__type));
 				audio_bus_main.effects[__index] = __effect;
