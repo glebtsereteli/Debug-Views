@@ -181,5 +181,19 @@ dbg_view("Demo: Instances", false, 16, 35, 250, 320); {
 		new Obj(objDemoGorilla);
 	}
 }
-
-audio_play_sound(sndElevatorMusic, 0, true);
+dbg_view("Demo: Audio Effects", false, 16, 35, 250, 310); {
+	audioEffects = {
+		sound: -1,
+		playing: false,
+	};
+	
+	dbg_checkbox(ref_create(audioEffects, "playing"), "Sound");
+	
+	var _i = 0; repeat (8) {
+		with ({_i}) dbg_button($"Random Effect {_i}", function() {
+			var _type = method_call(choose, __LookoutGetAudioEffectTypes());
+			audio_bus_main.effects[_i] = audio_effect_create(_type);
+		}, 240);
+		_i++;
+	}
+}

@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"sndElevatorMusic",
+  "%Name":"sndDemoAudioEffects",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -12,7 +12,7 @@
   "conversionMode":0,
   "duration":27.042244,
   "exportDir":"",
-  "name":"sndElevatorMusic",
+  "name":"sndDemoAudioEffects",
   "parent":{
     "name":"Lookout Demo",
     "path":"Lookout Demo.yyp",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"sndElevatorMusic.wav",
+  "soundFile":"sndDemoAudioEffects.wav",
   "volume":1.0,
 }

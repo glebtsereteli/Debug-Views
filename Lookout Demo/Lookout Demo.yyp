@@ -61,7 +61,7 @@
     {"id":{"name":"LookoutViewResources","path":"scripts/LookoutViewResources/LookoutViewResources.yy",},},
     {"id":{"name":"LookoutViewRooms","path":"scripts/LookoutViewRooms/LookoutViewRooms.yy",},},
     {"id":{"name":"scrDemo","path":"scripts/scrDemo/scrDemo.yy",},},
-    {"id":{"name":"sndElevatorMusic","path":"sounds/sndElevatorMusic/sndElevatorMusic.yy",},},
+    {"id":{"name":"sndDemoAudioEffects","path":"sounds/sndDemoAudioEffects/sndDemoAudioEffects.yy",},},
     {"id":{"name":"sprDemo","path":"sprites/sprDemo/sprDemo.yy",},},
     {"id":{"name":"sprDemoGorilla","path":"sprites/sprDemoGorilla/sprDemoGorilla.yy",},},
     {"id":{"name":"sprDemoOwl","path":"sprites/sprDemoOwl/sprDemoOwl.yy",},},

@@ -1,9 +1,12 @@
 
-if (keyboard_check_pressed(ord("1"))) {
-	audio_bus_main.effects[0] = audio_effect_create(AudioEffectType.Bitcrusher, {
-		factor: 50,
-	});
-}
-if (keyboard_check_pressed(ord("2"))) {
-	audio_bus_main.effects[0].factor = irandom_range(20, 50);
+// Toggle Audio Effects' sound:
+with (audioEffects) {
+	if (playing) {
+		if (not audio_is_playing(sound)) {
+		    sound = audio_play_sound(sndDemoAudioEffects, 0, true);
+		}
+	}
+	else if (audio_is_playing(sound)) {
+	    audio_stop_sound(sound);
+	}
 }
