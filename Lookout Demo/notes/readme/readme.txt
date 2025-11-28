@@ -1,4 +1,4 @@
-# Lookout v1.0.0 Demo
+# Lookout v1.1.0 Demo
 
 ## Welcome!
 Welcome to the Lookout demo! This demo showcases the library's debug views in action.
@@ -22,3 +22,9 @@ To get started, launch the game and open the Views menu in the top bar of the De
 1. Open the "Lookout: Rooms" view.
 2. Use the provided controls to switch between demo rooms.
 3. Watch the History section update with every room you visit.
+
+## Audio Effects
+1. Open the "Lookout: Audio Effects" view alongside its "Demo: Audio Effects" counterpart.
+2. Use the provided controls to randomize play a test sound and randomize the effects on the main bus.
+3. Watch the interface update with the changed parameters.
+4. Use the interface to change effect parameters.

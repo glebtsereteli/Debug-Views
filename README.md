@@ -1,7 +1,7 @@
 
 <img width="1280" height="300" alt="banner" src="https://github.com/user-attachments/assets/ff3e8122-2e01-4c94-9419-aead1907452d" />
 
-# Lookout v1.0.0
+# Lookout v1.1.0
 
 Lookout is a compact [Free and Open Source](https://en.wikipedia.org/wiki/Free_and_open-source_software) GameMaker library offering a variety of [Debug Overlay](https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Debugging/The_Debug_Overlay.htm) views for identifying common but often hard-to-diagnose problems.
 
@@ -27,6 +27,7 @@ These views have proven invaluable for tracking bugs and memory leaks across man
 * `LookoutInstances()`. Displays the overall and per-object instance counts, including differences between frames, with an option to destroy objects. Helps track existing objects and their instance counts to identify misplaced instances.
 * `LookoutDisplay()`. Provides detailed information and controls for display, window, application surface, and views. Inspired by [Pixelated Pope](https://www.pixelatedpope.com/)'s [display_write_all_specs()](https://github.com/PixelatedPope/HelpfulGMLScripts/blob/master/Camera%20and%20Views/display_write_all_specs.gml).
 * `LookoutRooms()`. Provides controls over room switching and displays room history. Useful for quickly switching between rooms for testing and identifying unintentional room changes.
+* `LookoutAudioEffects()`. Provides controls over all eight audio effects on [audio_bus_main](https://manual.gamemaker.io/monthly/en/GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Effects/audio_bus_main.htm). Includes type selection and parameter tweaking. Helpful for monitoring active effects and experimenting with parameters to achieve the desired sound.
 
 ## Usage
 
@@ -55,7 +56,6 @@ These are the views I plan to add in the future.
 | Steam | Coming soon | - |
 | System | Coming soon | - |
 | Physics | Coming soon | - |
-| Audio Effects | Coming soon | - |
 | Asset Search | Coming soon | - |
 | FMOD | Maybe | Niche |
 | Twitch | Maybe | Niche |

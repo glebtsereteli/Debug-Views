@@ -10,10 +10,12 @@ LookoutResources(false);
 LookoutInstances(false);
 LookoutDisplay(false);
 LookoutRooms(false);
-LookoutAudioEffects(true);
+LookoutAudioEffects(false);
 
 // Initialize demo views:
-dbg_view("Demo: Resources", false, 16, 35, 300, 850); {
+var _x = 16;
+var _y = 35;
+dbg_view("Demo: Resources", true, _x, _y, 300, 850); {
 	global.partSystem = part_system_create();
 	
 	Res = function(_name, _creator, _destructor) constructor {
@@ -124,7 +126,7 @@ dbg_view("Demo: Resources", false, 16, 35, 300, 850); {
 		new Res("Timeline", timeline_add, timeline_delete);
 	}
 }
-dbg_view("Demo: Instances", false, 16, 35, 250, 320); {
+dbg_view("Demo: Instances", false, _x, _y, 250, 320); {
 	Obj = function(_ref) constructor {
 		ref = _ref;
 		pool = [];
@@ -181,7 +183,7 @@ dbg_view("Demo: Instances", false, 16, 35, 250, 320); {
 		new Obj(objDemoGorilla);
 	}
 }
-dbg_view("Demo: Audio Effects", false, 16, 35, 250, 310); {
+dbg_view("Demo: Audio Effects", false, _x, _y, 250, 310); {
 	audioEffects = {
 		sound: -1,
 		playing: false,

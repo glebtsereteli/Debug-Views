@@ -3,9 +3,8 @@
 /// @func LookoutAudioEffects()
 /// @param {bool} [startVisible=true] Whether the debug view starts visible (true) or not (false).
 ///
-/// @desc Provides controls for all 8 audio effects on the main audio bus in a "Lookout: Audio Effects" debug view.
-/// Includes type selection and parameter tweaking. Automatically listens for remote changes to audio effects
-/// and updates the interface accordingly.
+/// @desc Provides controls for all 8 audio effects on audio_bus_main in a "Lookout: Audio Effects" debug view.
+/// Includes type selection and parameter tweaking.
 ///
 /// Call this function once at the start of the game.
 function LookoutAudioEffects(_startVisible = true) {
