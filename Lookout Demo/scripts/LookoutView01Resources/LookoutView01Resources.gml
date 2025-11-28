@@ -3,9 +3,8 @@
 /// @func LookoutResources()
 /// @param {Bool} startVisible? Whether the debug view starts visible (true) or not (false). [Default: true]
 /// 
-/// @desc Displays "ResourceCounts" and "DumpMemory" data from debug_event() + a few custom-tracked resources.
-/// Helps track memory leaks from data structures, surfaces, buffers, particles, time sources,
-/// and other runtime-created assets that can be accidentally left undisposed.
+/// @desc Displays "ResourceCounts" and "DumpMemory" data from debug_event() + a few custom-tracked resources in a "Lookout: Resources" debug view.
+/// Helps track memory leaks from data structures, surfaces, buffers, particles, time sources, and other runtime-created assets that can be accidentally left undisposed.
 /// 
 /// NOTE: This function is quite slow when the Debug Overlay is open, since debug_event() is being called every frame.
 /// Don't be alarmed if your FPS drops with this enabled.

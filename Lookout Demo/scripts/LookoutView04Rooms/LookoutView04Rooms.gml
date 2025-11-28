@@ -3,7 +3,7 @@
 /// @func LookoutRooms()
 /// @param {Bool} startVisible? Whether the debug view starts visible (true) or not (false). [Default: true]
 /// 
-/// @desc Provides control over room switching and displays room history in a Rooms debug overlay view.
+/// @desc Provides control over room switching and displays room history in a "Lookout: Rooms" debug view.
 /// Useful for quickly switching between rooms for testing, and identifying unintentional room changes.
 ///
 /// Call this function once at the start of the game.

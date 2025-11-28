@@ -1,7 +1,7 @@
 // feather ignore all
 
 /// @func LookoutAudioEffects()
-/// @param {bool} [startVisible=true] Whether the debug view starts visible (true) or not (false).
+/// @param {Bool} startVisible? Whether the debug view starts visible (true) or not (false). [Default: true]
 ///
 /// @desc Provides controls for all 8 audio effects on audio_bus_main in a "Lookout: Audio Effects" debug view.
 /// Includes type selection and parameter tweaking.

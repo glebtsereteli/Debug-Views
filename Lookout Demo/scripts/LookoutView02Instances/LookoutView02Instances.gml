@@ -3,7 +3,7 @@
 /// @func LookoutInstances()
 /// @param {Bool} startVisible? Whether the debug view starts visible (true) or not (false). [Default: true]
 /// 
-/// @desc Displays the overall and per-object instance counts in a debug view, including differences between frames, with an option to destroy objects.
+/// @desc Displays the overall and per-object instance counts in a "Lookout: Instances" debug view, including differences between frames, with an option to destroy objects.
 /// Helps track existing objects and their instance counts to identify objects that are out of place.
 /// 
 /// Call this function once at the start of the game.

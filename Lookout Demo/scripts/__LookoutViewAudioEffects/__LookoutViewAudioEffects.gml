@@ -1,11 +1,7 @@
 // feather ignore all
 
 function __LookoutAudioEffect(_index) constructor {
-	static __types = (function() {
-		var _types = variable_clone(__LookoutGetAudioEffectTypes());
-		array_insert(_types, 0, undefined);
-		return _types;
-	})();
+	static __types = array_concat([undefined], __LookoutGetAudioEffectTypes());
 	static __n = array_length(__types);
 	
 	__index = _index;
