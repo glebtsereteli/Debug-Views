@@ -24,7 +24,7 @@ function LookoutAudioEffects(_startVisible = true) {
 		
 		__LookoutCreateView("Lookout: Audio Effects", _startVisible, 420, 500);
 		dbg_section("Master"); {
-			var _w = 100;
+			var _w = 130;
 			var _h = 19;
 			dbg_button("Remove All", function() {
 				array_foreach(audio_bus_main.effects, function(_effect, _i) {
