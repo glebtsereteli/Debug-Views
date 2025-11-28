@@ -22,7 +22,7 @@ function LookoutAudioEffects(_startVisible = true) {
 			__Refresh();
 		}, true);
 		
-		__view = dbg_view("Lookout: Audio Effects", _startVisible, 16, 35, 420, 500);
+		__LookoutCreateView("Lookout: Audio Effects", _startVisible, 420, 500);
 		__effects = array_create_ext(8, function(_i) {
 			return new __LookoutAudioEffect(_i);
 		});

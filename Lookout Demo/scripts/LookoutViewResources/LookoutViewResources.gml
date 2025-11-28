@@ -63,7 +63,7 @@ function LookoutResources(_startVisible = true) {
 		_Refresh();
 		call_later(1, time_source_units_frames, _Refresh, true);
 		
-		dbg_view("Lookout: Resources", _startVisible, 16, 35, 420, 671);
+		__LookoutCreateView("Lookout: Resources", _startVisible, 420, 705);
 		dbg_section("Resources"); {
 			dbg_text_separator("Data Structures", 1); {
 				dbg_watch(ref_create(self, "listCount"), "DS Lists");
